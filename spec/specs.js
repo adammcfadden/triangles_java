@@ -7,4 +7,11 @@ describe("triangulate", function() {
     expect(triangulate(3, 3, 3)).to.equal("equilateral");
   });
 
+  it("is isosceles if two sides are the same", function(){
+    expect(triangulate(4, 4, 6)).to.equal("isosceles");
+  });
+
+  it("is scalene if no two sides are equal", function() {
+    expect(triangulate(4, 2, 3)).to.equal("scalene");
+  });
 });
